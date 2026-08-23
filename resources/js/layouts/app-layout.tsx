@@ -1,5 +1,5 @@
 import { Head, Link, router, usePage } from '@inertiajs/react';
-import { Bell, LayoutDashboard, Linkedin, Megaphone, Menu, Newspaper, Settings, SunMoon, X } from 'lucide-react';
+import { Bell, LayoutDashboard, Megaphone, Menu, Newspaper, Settings, Share2, SunMoon, X } from 'lucide-react';
 import { useState, type ReactNode } from 'react';
 import { FlashToasts } from '@/components/flash-toasts';
 import { Button } from '@/components/ui/button';
@@ -12,7 +12,7 @@ const nav = [
     { href: '/posts/today', label: "Today's post", icon: Newspaper },
     { href: '/campaigns', label: 'Campaigns', icon: Megaphone },
     { href: '/posts', label: 'History', icon: Newspaper },
-    { href: '/linkedin', label: 'LinkedIn', icon: Linkedin },
+    { href: '/linkedin', label: 'LinkedIn', icon: Share2 },
     { href: '/settings/profile', label: 'Settings', icon: Settings },
 ];
 
