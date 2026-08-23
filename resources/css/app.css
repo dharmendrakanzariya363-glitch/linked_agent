@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@source '../views';
+@source '../js';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans:
+        'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-ring: var(--ring);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --radius-lg: 0.9rem;
+    --radius-md: 0.7rem;
+    --radius-sm: 0.5rem;
+}
+
+:root {
+    --background: #f6f8fb;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --muted: #eef2f7;
+    --muted-foreground: #5b6b82;
+    --border: #dce5ef;
+    --input: #dce5ef;
+    --primary: #0a66c2;
+    --primary-foreground: #ffffff;
+    --secondary: #e8f1fb;
+    --secondary-foreground: #0a66c2;
+    --accent: #0f766e;
+    --accent-foreground: #ffffff;
+    --destructive: #dc2626;
+    --ring: #0a66c2;
+    --sidebar: #0f172a;
+    --sidebar-foreground: #e2e8f0;
+    --sidebar-border: #1e293b;
+}
+
+.dark {
+    --background: #070b14;
+    --foreground: #e8eef7;
+    --card: #101826;
+    --card-foreground: #e8eef7;
+    --muted: #1a2434;
+    --muted-foreground: #93a4bb;
+    --border: #243044;
+    --input: #243044;
+    --primary: #4d9de0;
+    --primary-foreground: #071018;
+    --secondary: #152033;
+    --secondary-foreground: #d7e8f8;
+    --accent: #14b8a6;
+    --accent-foreground: #042f2e;
+    --destructive: #f87171;
+    --ring: #4d9de0;
+    --sidebar: #0b1220;
+    --sidebar-foreground: #e8eef7;
+    --sidebar-border: #1e293b;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
