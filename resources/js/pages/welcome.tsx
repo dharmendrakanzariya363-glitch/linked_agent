@@ -27,7 +27,7 @@ export default function Welcome() {
             </header>
             <main className="mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-2 lg:items-center">
                 <div>
-                    <p className="text-sm font-medium text-primary">Laravel 13 · React · OpenAI</p>
+                    <p className="text-sm font-medium text-primary">Laravel 13 · React · AI</p>
                     <h1 className="mt-3 text-4xl font-semibold tracking-tight lg:text-5xl">
                         Generate LinkedIn posts every day. Publish only when you approve.
                     </h1>

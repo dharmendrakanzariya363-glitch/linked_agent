@@ -127,7 +127,7 @@ class AIService
                 $pending->attachments($attachments);
             }
 
-            $image = $pending->generate();
+            $image = $pending->generate(provider: (string) config('ai.default_for_images'));
             $filename = 'v'.$version->id.'.png';
             $directory = 'posts/'.$post->id;
             $path = $image->storePubliclyAs($directory, $filename, $disk);

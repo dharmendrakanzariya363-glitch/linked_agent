@@ -13,6 +13,11 @@ class ContentAgent implements Agent, HasStructuredOutput
 {
     use Promptable;
 
+    public function provider(): string
+    {
+        return (string) config('ai.default');
+    }
+
     public function instructions(): Stringable|string
     {
         return ContentPrompts::systemInstructions();

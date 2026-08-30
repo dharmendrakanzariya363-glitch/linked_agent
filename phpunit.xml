@@ -32,6 +32,9 @@
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="NIGHTWATCH_ENABLED" value="false"/>
+        <env name="AI_PROVIDER" value="gemini"/>
+        <env name="AI_IMAGE_PROVIDER" value="gemini"/>
+        <env name="GEMINI_API_KEY" value="testing"/>
         <env name="OPENAI_API_KEY" value="testing"/>
         <env name="LINKEDIN_CLIENT_ID" value="test-client"/>
         <env name="LINKEDIN_CLIENT_SECRET" value="test-secret"/>

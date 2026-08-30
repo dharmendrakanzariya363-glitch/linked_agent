@@ -7,17 +7,17 @@ return [
     | Default AI Provider Names
     |--------------------------------------------------------------------------
     |
-    | Here you may specify which of the AI providers below should be the
-    | default for AI operations when no explicit provider is provided
-    | for the operation. This should be any provider defined below.
+    | Set AI_PROVIDER in .env to gemini or openai. Text, audio, and
+    | embeddings follow that provider. Image generation follows
+    | AI_IMAGE_PROVIDER, which defaults to the same value.
     |
     */
 
-    'default' => 'openai',
-    'default_for_images' => env('AI_IMAGE_PROVIDER', 'openai'),
-    'default_for_audio' => 'openai',
-    'default_for_transcription' => 'openai',
-    'default_for_embeddings' => 'openai',
+    'default' => env('AI_PROVIDER', 'gemini'),
+    'default_for_images' => env('AI_IMAGE_PROVIDER', env('AI_PROVIDER', 'gemini')),
+    'default_for_audio' => env('AI_PROVIDER', 'gemini'),
+    'default_for_transcription' => env('AI_PROVIDER', 'gemini'),
+    'default_for_embeddings' => env('AI_PROVIDER', 'gemini'),
     'default_for_reranking' => 'cohere',
 
     /*
